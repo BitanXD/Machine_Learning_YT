@@ -1,97 +1,87 @@
 # Exploratory Data Analysis (EDA) — Machine Learning YT
 
-This repository contains an Exploratory Data Analysis (EDA) project implemented in Jupyter Notebooks. The notebooks walk through data loading, cleaning, visualization, and initial insights to inform downstream machine learning tasks.
+This repository contains an Exploratory Data Analysis (EDA) project implemented in Jupyter Notebooks. The notebooks walk through data loading, cleaning, visualization, and initial insights to inform machine learning modeling decisions.
 
 ## Project Overview
 
-- Purpose: Perform EDA on the provided dataset(s) to understand features, detect issues (missing values, outliers), and generate visualizations and summary statistics that guide modeling.
-- Contents: EDA notebooks, visualizations, and any auxiliary scripts or resources used for analysis.
+- Purpose: Perform EDA on datasets to understand features, detect issues (missing values, outliers), and generate visualizations and summary statistics that guide modeling.
+- Contents: EDA notebooks, visualizations, and auxiliary resources used for analysis.
 
 ## Repository Structure
 
-- notebooks/ or root .ipynb files — Jupyter notebooks containing the EDA workflows.
-- data/ — (optional) place datasets here if they are small and permitted to commit. Large datasets should be referenced with download instructions.
-- outputs/ or figures/ — (optional) generated plots, tables, or exported summary files.
+```
+Machine_Learning_YT/
+├── README.md
+├── EDA/
+│   ├── data/                          # Dataset storage
+│   └── notebooks/                     # Jupyter notebooks
+│       ├── Insurance_EDA.ipynb
+│       └── heart_attack.ipynb
+└── anaconda_projects/                 # Anaconda project files
+```
 
 > Note: This repository's files are primarily Jupyter Notebooks (100% Jupyter Notebook by language composition).
 
 ## Notebooks
 
-List the main notebooks in the repo and their purpose. Update this list to match the actual filenames.
+The main notebooks in the repo and their purpose:
 
-- 01_Data_Loading_and_Cleaning.ipynb — load data, initial cleaning, handle missing values, basic preprocessing.
-- 02_Univariate_Analysis.ipynb — distribution plots and summary statistics for individual features.
-- 03_Bivariate_Analysis.ipynb — relationships between features, correlations, scatter plots, and heatmaps.
-- 04_Feature_Engineering_and_Summary.ipynb — derived features, encoding, scaling, and final EDA summary.
+- **Insurance_EDA.ipynb** — Exploratory Data Analysis on insurance dataset, including data loading, cleaning, feature analysis, visualizations, and summary statistics.
+- **heart_attack.ipynb** — Exploratory Data Analysis on heart attack prediction dataset, including distribution analysis, correlations, and feature relationships.
 
 ## How to run
 
 1. Clone the repository:
 
+   ```bash
    git clone https://github.com/BitanXD/Machine_Learning_YT.git
    cd Machine_Learning_YT
+   ```
 
 2. (Optional) Create a virtual environment and activate it:
 
+   ```bash
    python -m venv .venv
    source .venv/bin/activate  # macOS/Linux
    .\.venv\Scripts\activate   # Windows (PowerShell)
+   ```
 
-3. Install dependencies. If the repository has a requirements.txt, run:
+3. Install dependencies. A typical set of packages for EDA includes:
 
-   pip install -r requirements.txt
-
-If there is no requirements file, a typical set of packages for EDA includes:
-
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- plotly (optional, for interactive plots)
-- jupyterlab or notebook
-
-Install example:
-
-   pip install pandas numpy matplotlib seaborn jupyterlab
+   ```bash
+   pip install pandas numpy matplotlib seaborn jupyter jupyterlab
+   ```
 
 4. Launch Jupyter and open the notebooks:
 
+   ```bash
    jupyter lab
+   ```
 
-or
+   or
 
+   ```bash
    jupyter notebook
+   ```
 
-Open the notebooks listed above and run the cells in order.
+   Navigate to `EDA/notebooks/` and open the notebooks in order.
 
 ## Data
 
-- If datasets are small and included, check the data/ directory. If datasets are large or private, include download instructions here (URLs or commands) and any preprocessing steps required to place the files under data/.
+Datasets are stored in the `EDA/data/` directory. Refer to individual notebooks for specific data sources and any preprocessing steps applied before analysis.
 
-Example:
+## Findings and Recommendations
 
-- data/dataset.csv — primary dataset used for analysis.
-
-If your data requires credentials or restricted access, describe how to obtain it and any transformations performed before analysis.
-
-## Findings and Recommendations (Add after running notebooks)
-
-Summarize the high-level findings from the EDA here — key patterns, issues to address before modeling, important correlations, recommended features, and next steps.
-
-Example placeholders to update:
-
-- Missing values: Column `age` has ~5% missing; recommend imputation strategy.
-- Outliers: `income` contains extreme values that should be capped or log-transformed.
-- Correlations: `feature_a` and `feature_b` show strong correlation (r = 0.8), consider dimensionality reduction or removing one.
+Refer to individual notebook outputs for key findings, patterns identified, issues to address before modeling, important correlations, and recommended features for next steps.
 
 ## Reproducibility
 
-- Fix random seeds where applicable in notebooks (e.g., numpy.random.seed, random.seed).
-- Record library versions (a `requirements.txt` or `environment.yml` is recommended).
+- Random seeds are set where applicable in notebooks to ensure reproducible results.
+- Key Python packages and their versions can be captured with:
 
-To generate a requirements file locally:
-
+   ```bash
    pip freeze > requirements.txt
+   ```
 
 ## Contributing
 
@@ -103,7 +93,7 @@ If you want to contribute improvements to the EDA (additional visualizations, no
 
 ## License
 
-If you have a preferred license, add it here (e.g., MIT, Apache-2.0). If not, consider adding one to clarify permitted uses.
+This repository is provided as-is for educational purposes. If you want to add a specific license, please update this section (e.g., MIT, Apache-2.0).
 
 ## Contact
 
