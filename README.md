@@ -74,27 +74,6 @@ Datasets are stored in the `EDA/data/` directory. Refer to individual notebooks 
 
 Refer to individual notebook outputs for key findings, patterns identified, issues to address before modeling, important correlations, and recommended features for next steps.
 
-## Reproducibility
-
-- Random seeds are set where applicable in notebooks to ensure reproducible results.
-- Key Python packages and their versions can be captured with:
-
-   ```bash
-   pip freeze > requirements.txt
-   ```
-
-## Contributing
-
-If you want to contribute improvements to the EDA (additional visualizations, notebook cleanup, or derived features):
-
-1. Fork the repository
-2. Create a feature branch
-3. Open a pull request with a clear description of changes
-
-## License
-
-This repository is provided as-is for educational purposes. If you want to add a specific license, please update this section (e.g., MIT, Apache-2.0).
-
 ## Contact
 
 For questions or feedback, open an issue or contact the repository owner: https://github.com/BitanXD
